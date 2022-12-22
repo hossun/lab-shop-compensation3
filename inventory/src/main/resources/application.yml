@@ -15,6 +15,12 @@ spring:
   cloud:
     stream:
       kafka:
+        bindings:
+          event-in:
+            consumer:
+              enableDlq: true
+              dlqName: dlq-kafkatest
+              dlqPartitions: 1
         binder:
           brokers: localhost:9092
         streams:
