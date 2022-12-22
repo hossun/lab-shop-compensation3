@@ -30,6 +30,12 @@ spring:
           group: inventory
           destination: labshopcompensation
           contentType: application/json
+          consumer:
+            max-attempts: 3
+            back-off-initial-interval: 1000
+            back-off-max-interval: 1000
+            back-off-multiplier: 1.0
+            defaultRetryable: false  
         event-out:
           destination: labshopcompensation
           contentType: application/json
