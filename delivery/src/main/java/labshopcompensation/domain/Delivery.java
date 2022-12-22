@@ -78,12 +78,8 @@ public class Delivery  {
         delivery.setAddress(orderPlaced.getAddress());
         
         repository().save(delivery);
-
-       
- 
-
-        
     }
+    
     public static void removeDelivery(OrderCancelled orderCancelled){
 
         /** Example 1:  new item 
